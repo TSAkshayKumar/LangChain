@@ -41,7 +41,7 @@ def create_vector_embedding():
         st.session_state.docs=st.session_state.loader.load() ## Document Loading
         st.session_state.text_splitter=RecursiveCharacterTextSplitter(chunk_size=1000,chunk_overlap=200)
         print(st.session_state.doc[:10],"===========")
-        st.session_state.final_documents=st.session_state.text_splitter.split_documents(st.session_state.docs[:10]) # 10 pdf files
+        st.session_state.final_documents=st.session_state.text_splitter.split_documents(st.session_state.docs[:10]) # 1st 10 documents object only
         st.session_state.vectors=FAISS.from_documents(st.session_state.final_documents,st.session_state.embeddings)
 st.title("RAG Document Q&A With Groq And Lama3")
 
