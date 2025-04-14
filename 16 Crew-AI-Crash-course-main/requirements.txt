@@ -1,0 +1,8 @@
+crewai
+crewai_tools
+load_dotenv
+langchain-huggingface
+ollama
+langchain
+langchain-community
+sentence-transformers
